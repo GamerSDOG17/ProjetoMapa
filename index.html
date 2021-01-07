@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Map</title>
+    <!-- key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE& -->
+    <!--minha key=AIzaSyD2Lil23Ly74rmxLOUhH6VSVELLv9HxqIY -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+  
+  </head>
+   <body>
+    <div id="map"></div>
+      
+    <button id="btMark" type="button" class="btn btn-light" onclick="apertarBt()">
+      Inserir Marcador
+    </button>
+
+<!-- Modal DO INSERT -->
+<form id="formModal" method="POST" >
+<div class="modal fade" id="ex1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Insira o nome do Marcador</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span id="btXClose" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input  id="nome" placeholder="Insira o nome aqui" type="text" class="form-control" name="nome" required>
+      </div>
+      <div class="modal-footer">
+        <button id="btClose" type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button  type="submit" class="btn btn-primary">Salvar mudanças</button>
+    </div>
+   </div>
+  </div> 
+ </div>
+</form>
+
+<!-- MODAL DELETE OU UPDATE -->
+<div class="modal fade bd-example-modal-sm" id="ex2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button id="btDelete" type="button" class="btn btn-danger col-5 ">Delete Marker</button>
+        <button id="btUpdate" type="button" class="btn btn-primary col-6 ">Change Name</button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span id="btXClose" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     </div>
+    </div>
+  </div>
+
+<!-- MODAL UPDATE -->
+     <form id="formModalUpdate" method="POST" >
+      <div class="modal fade" id="ex3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Insira o novo nome do Marcador</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span id="btXClose" aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input id="nomeUpdate" placeholder="Insira o novo nome do marcador aqui" type="text" class="form-control" name="nome" required>
+            </div>
+            <div class="modal-footer">
+              <button id="btClose" type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button  type="submit" class="btn btn-primary">Salvar mudanças</button>
+          </div>
+         </div>
+        </div> 
+       </div>
+      </form>
+   
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
